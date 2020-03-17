@@ -108,6 +108,72 @@ class HomeController extends Controller {
 		  $chartDataSS[] = [$date, $numConfirmedSS];
 		});
 
+
+
+		// China Data
+    	$countryCodeCN = 'CN';
+
+		$confirmedCN = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
+		$confirmedDataCN = collect($confirmedCN['locations'])->where('country_code', $countryCodeCN)->first();
+
+		$chartDataCN = [
+			['Date', '# Confirmed']
+		];
+
+		collect($confirmedDataCN['history'])->sortBy(function ($numConfirmedCN, $date) {
+			return Carbon::createFromFormat('n/j/y', $date)->startOfDay();
+		})->map(function ($numConfirmedCN, $date) use (&$chartDataCN) {
+		  $chartDataCN[] = [$date, $numConfirmedCN];
+		});
+
+		// Italy Data
+    	$countryCodeIT = 'IT';
+
+		$confirmedIT = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
+		$confirmedDataIT = collect($confirmedIT['locations'])->where('country_code', $countryCodeIT)->first();
+
+		$chartDataIT = [
+			['Date', '# Confirmed']
+		];
+
+		collect($confirmedDataIT['history'])->sortBy(function ($numConfirmedIT, $date) {
+			return Carbon::createFromFormat('n/j/y', $date)->startOfDay();
+		})->map(function ($numConfirmedIT, $date) use (&$chartDataIT) {
+		  $chartDataIT[] = [$date, $numConfirmedIT];
+		});
+
+		// USA Data
+    	$countryCodeUS = 'US';
+
+		$confirmedUS = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
+		$confirmedDataUS = collect($confirmedUS['locations'])->where('country_code', $countryCodeUS)->first();
+
+		$chartDataUS = [
+			['Date', '# Confirmed']
+		];
+
+		collect($confirmedDataUS['history'])->sortBy(function ($numConfirmedUS, $date) {
+			return Carbon::createFromFormat('n/j/y', $date)->startOfDay();
+		})->map(function ($numConfirmedUS, $date) use (&$chartDataUS) {
+		  $chartDataUS[] = [$date, $numConfirmedUS];
+		});
+
+		// UK Data
+    	$countryCodeUK = 'GB';
+
+		$confirmedUK = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
+		$confirmedDataUK = collect($confirmedUK['locations'])->where('country_code', $countryCodeUK)->first();
+
+		$chartDataUK = [
+			['Date', '# Confirmed']
+		];
+
+		collect($confirmedDataUK['history'])->sortBy(function ($numConfirmedUK, $date) {
+			return Carbon::createFromFormat('n/j/y', $date)->startOfDay();
+		})->map(function ($numConfirmedUK, $date) use (&$chartDataUK) {
+		  $chartDataUK[] = [$date, $numConfirmedUK];
+		});
+
 		return view('welcome1', [
 		  	'chartDataKE' => $chartDataKE,
 			'countryKE' => $confirmedDataKE['country'],
@@ -125,7 +191,20 @@ class HomeController extends Controller {
 			'countryBI' => $confirmedDataBI['country'],
 
 			'chartDataSS' => $chartDataSS,
-			'countrySS' => $confirmedDataSS['country']
+			'countrySS' => $confirmedDataSS['country'],
+
+
+			'chartDataCN' => $chartDataCN,
+			'countryCN' => $confirmedDataCN['country'],
+
+			'chartDataIT' => $chartDataIT,
+			'countryIT' => $confirmedDataIT['country'],
+
+			'chartDataUS' => $chartDataUS,
+			'countryUS' => $confirmedDataUS['country'],
+
+			'chartDataUK' => $chartDataUK,
+			'countryUK' => $confirmedDataUK['country']
 		]);
     }
 }

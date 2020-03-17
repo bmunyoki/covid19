@@ -149,6 +149,74 @@
             }
         </script> -->
 
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var dataCN = google.visualization.arrayToDataTable(@json($chartDataCN));
+                var chartCN = new google.visualization.AreaChart(document.getElementById('chartCN'));
+                chartCN.draw(dataCN, {
+                    title: 'Corona (COVID19) cases in {{ $countryCN }}',
+                    legend: {position: 'bottom'},
+                    width: '100%',
+                    height: '500',
+                    colors: ['#FFFF00']
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var dataIT = google.visualization.arrayToDataTable(@json($chartDataIT));
+                var chartIT = new google.visualization.AreaChart(document.getElementById('chartIT'));
+                chartIT.draw(dataIT, {
+                    title: 'Corona (COVID19) cases in {{ $countryIT }}',
+                    legend: {position: 'bottom'},
+                    width: '100%',
+                    height: '500',
+                    colors: ['#008C45']
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var dataUS = google.visualization.arrayToDataTable(@json($chartDataUS));
+                var chartUS = new google.visualization.AreaChart(document.getElementById('chartUS'));
+                chartUS.draw(dataUS, {
+                    title: 'Corona (COVID19) cases in {{ $countryUS }}',
+                    legend: {position: 'bottom'},
+                    width: '100%',
+                    height: '500',
+                    colors: ['#B22234']
+                });
+            }
+        </script>
+
+        <script type="text/javascript">
+            google.charts.load('current', {'packages': ['corechart']});
+            google.charts.setOnLoadCallback(drawChart);
+
+            function drawChart() {
+                var dataUK = google.visualization.arrayToDataTable(@json($chartDataUK));
+                var chartUK = new google.visualization.AreaChart(document.getElementById('chartUK'));
+                chartUK.draw(dataUK, {
+                    title: 'Corona (COVID19) cases in {{ $countryUK }}',
+                    legend: {position: 'bottom'},
+                    width: '100%',
+                    height: '500',
+                    colors: ['#00247D']
+                });
+            }
+        </script>
+
 
         <div class="container-fluid flex-center">
             <div class="content">
@@ -163,6 +231,18 @@
                     <div class="col-md-6" id="chartUG"></div>
                     <div class="col-md-6" id="chartSS"></div>
                     <div class="col-md-6" id="chartBI"></div>
+
+                </div>
+
+                <div class="title m-b-md">
+                    Compare with China, Italy, US and UK
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6" id="chartCN"></div>
+                    <div class="col-md-6" id="chartIT"></div>
+                    <div class="col-md-6" id="chartUS"></div>
+                    <div class="col-md-6" id="chartUK"></div>
                 </div>
 
                 <div class="row">
