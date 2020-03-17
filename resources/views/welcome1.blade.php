@@ -19,7 +19,7 @@
             }
 
             .title {
-                font-size: 60px;
+                font-size: 50px;
                 text-align: center;
             }
 
@@ -37,6 +37,16 @@
                 margin-bottom: 30px;
             }
         </style>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153610504-2"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+
+            gtag('config', 'UA-153610504-2');
+        </script>
+
     </head>
     <body>
         <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
