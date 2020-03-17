@@ -247,7 +247,7 @@
 
                 <div class="row">
                     <div class="col-md-12 links" style="text-align: center; margin-top: 25px;">
-                        <a target="_blank" href="https://twitter.com/ibenjaminke">Made with Love by Benjamin.</a>
+                        <a target="_blank" href="https://twitter.com/ibenjaminke">Made with <span style="color: red; font-size: 10px;">&hearts;</span> by Benjamin.</a>
                         <a target="_blank" href="https://github.com/ExpDev07/coronavirus-tracker-api">Data Source: Github.</a>
                         <a href="#">Missing countries have 0 cases.</a>
                     </div>
