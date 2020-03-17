@@ -225,12 +225,12 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6" id="chartKE"></div>
-                    <div class="col-md-6" id="chartRW"></div>
-                    <div class="col-md-6" id="chartTZ"></div>
-                    <div class="col-md-6" id="chartUG"></div>
-                    <div class="col-md-6" id="chartSS"></div>
-                    <div class="col-md-6" id="chartBI"></div>
+                    <div class="col-md-12" id="chartKE"></div>
+                    <div class="col-md-12" id="chartRW"></div>
+                    <div class="col-md-12" id="chartTZ"></div>
+                    <div class="col-md-12" id="chartUG"></div>
+                    <div class="col-md-12" id="chartSS"></div>
+                    <div class="col-md-12" id="chartBI"></div>
 
                 </div>
 
@@ -239,10 +239,10 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-6" id="chartCN"></div>
-                    <div class="col-md-6" id="chartIT"></div>
-                    <div class="col-md-6" id="chartUS"></div>
-                    <div class="col-md-6" id="chartUK"></div>
+                    <div class="col-md-12" id="chartCN"></div>
+                    <div class="col-md-12" id="chartIT"></div>
+                    <div class="col-md-12" id="chartUS"></div>
+                    <div class="col-md-12" id="chartUK"></div>
                 </div>
 
                 <div class="row">
