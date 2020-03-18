@@ -27,7 +27,7 @@
                 overflow-x: auto;
             }*/
 
-            #content {
+            #chatWrapper1, #chatWrapper2 {
                 overflow-x: scroll;
                 overflow-y: hidden;
                 width: 400px;
@@ -235,7 +235,7 @@
                     COVID19 E. Africa Tracker/Visualizer
                 </div>
 
-                <div class="row">
+                <div class="row" id="chartWrapper1">
                     <div class="col-md-12" id="chartKE"></div>
                     <div class="col-md-12 table-responsive" id="chartRW"></div>
                     <div class="col-md-12" id="chartTZ"></div>
@@ -248,7 +248,7 @@
                     Compare with China, Italy, US and UK
                 </div>
 
-                <div class="row">
+                <div class="row" id="chartWrapper2">
                     <div class="col-md-12" id="chartCN"></div>
                     <div class="col-md-12" id="chartIT"></div>
                     <div class="col-md-12" id="chartUS"></div>
