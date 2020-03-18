@@ -207,4 +207,14 @@ class HomeController extends Controller {
 			'countryUK' => $confirmedDataUK['country']
 		]);
     }
+
+    public function test(){
+    	$countryCodeBI = "US";
+    	$confirmedBI = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
+		$confirmedDataBI = collect($confirmedBI['locations'])->where('country_code', $countryCodeBI)->first();
+
+		echo $confirmedBI;
+		echo "<br><br>";
+		print_r($confirmedDataBI);
+    }
 }

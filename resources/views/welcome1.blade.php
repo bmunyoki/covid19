@@ -2,7 +2,7 @@
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>COVID19 East Africa Visualizer</title>
 
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -21,6 +21,16 @@
             .title {
                 font-size: 50px;
                 text-align: center;
+            }
+
+            /*#chartKE, #chartRW, #chartTZ, #chartUG, #chartBI, #chartSS, #chartUS, #chartCN, #chartIT, #chartUK{
+                overflow-x: auto;
+            }*/
+
+            #content {
+                overflow-x: scroll;
+                overflow-y: hidden;
+                width: 400px;
             }
 
             .links > a {
@@ -60,8 +70,9 @@
                 chartKE.draw(dataKE, {
                     title: 'Corona (COVID19) cases in {{ $countryKE }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
+                    explorer: {axis: 'horizontal'},
                     colors: ['#922529']
                 });
             }
@@ -77,7 +88,7 @@
                 chartRW.draw(dataRW, {
                     title: 'Corona (COVID19) cases in {{ $countryRW }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#00A1DE']
                 });
@@ -94,7 +105,7 @@
                 chartTZ.draw(dataTZ, {
                     title: 'Corona (COVID19) cases in {{ $countryTZ }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#1EB53A']
                 });
@@ -159,7 +170,7 @@
                 chartCN.draw(dataCN, {
                     title: 'Corona (COVID19) cases in {{ $countryCN }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#FFFF00']
                 });
@@ -176,7 +187,7 @@
                 chartIT.draw(dataIT, {
                     title: 'Corona (COVID19) cases in {{ $countryIT }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#008C45']
                 });
@@ -193,7 +204,7 @@
                 chartUS.draw(dataUS, {
                     title: 'Corona (COVID19) cases in {{ $countryUS }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#B22234']
                 });
@@ -210,7 +221,7 @@
                 chartUK.draw(dataUK, {
                     title: 'Corona (COVID19) cases in {{ $countryUK }}',
                     legend: {position: 'bottom'},
-                    width: '100%',
+                    width: 1200,
                     height: '500',
                     colors: ['#00247D']
                 });
@@ -226,12 +237,11 @@
 
                 <div class="row">
                     <div class="col-md-12" id="chartKE"></div>
-                    <div class="col-md-12" id="chartRW"></div>
+                    <div class="col-md-12 table-responsive" id="chartRW"></div>
                     <div class="col-md-12" id="chartTZ"></div>
                     <div class="col-md-12" id="chartUG"></div>
                     <div class="col-md-12" id="chartSS"></div>
                     <div class="col-md-12" id="chartBI"></div>
-
                 </div>
 
                 <div class="title m-b-md">
