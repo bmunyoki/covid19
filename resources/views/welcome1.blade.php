@@ -27,10 +27,14 @@
                 overflow-x: auto;
             }*/
 
-            #chartWrapper1, #chartWrapper2 {
-                overflow-x: scroll;
-                overflow-y: hidden;
-                width: 400px;
+            
+
+            @media only screen and (max-width: 768px) {
+                #chartWrapper1, #chartWrapper2 {
+                    overflow-x: scroll;
+                    overflow-y: hidden;
+                    width: 400px;
+                }
             }
 
             .links > a {
@@ -238,7 +242,7 @@
                 <div id="chartWrapper1">
                     <div class="row">
                         <div class="col-md-12" id="chartKE"></div>
-                        <div class="col-md-12 table-responsive" id="chartRW"></div>
+                        <div class="col-md-12" id="chartRW"></div>
                         <div class="col-md-12" id="chartTZ"></div>
                         <div class="col-md-12" id="chartUG"></div>
                         <div class="col-md-12" id="chartSS"></div>
