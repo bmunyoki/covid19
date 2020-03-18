@@ -27,7 +27,7 @@
                 overflow-x: auto;
             }*/
 
-            #chatWrapper1, #chatWrapper2 {
+            #chartWrapper1, #chartWrapper2 {
                 overflow-x: scroll;
                 overflow-y: hidden;
                 width: 400px;
@@ -235,24 +235,28 @@
                     COVID19 E. Africa Tracker/Visualizer
                 </div>
 
-                <div class="row" id="chartWrapper1">
-                    <div class="col-md-12" id="chartKE"></div>
-                    <div class="col-md-12 table-responsive" id="chartRW"></div>
-                    <div class="col-md-12" id="chartTZ"></div>
-                    <div class="col-md-12" id="chartUG"></div>
-                    <div class="col-md-12" id="chartSS"></div>
-                    <div class="col-md-12" id="chartBI"></div>
+                <div id="chartWrapper1">
+                    <div class="row">
+                        <div class="col-md-12" id="chartKE"></div>
+                        <div class="col-md-12 table-responsive" id="chartRW"></div>
+                        <div class="col-md-12" id="chartTZ"></div>
+                        <div class="col-md-12" id="chartUG"></div>
+                        <div class="col-md-12" id="chartSS"></div>
+                        <div class="col-md-12" id="chartBI"></div>
+                    </div>
                 </div>
 
                 <div class="title m-b-md">
                     Compare with China, Italy, US and UK
                 </div>
 
-                <div class="row" id="chartWrapper2">
-                    <div class="col-md-12" id="chartCN"></div>
-                    <div class="col-md-12" id="chartIT"></div>
-                    <div class="col-md-12" id="chartUS"></div>
-                    <div class="col-md-12" id="chartUK"></div>
+                <div id="chartWrapper2">
+                    <div class="row">
+                        <div class="col-md-12" id="chartCN"></div>
+                        <div class="col-md-12" id="chartIT"></div>
+                        <div class="col-md-12" id="chartUS"></div>
+                        <div class="col-md-12" id="chartUK"></div>
+                    </div>
                 </div>
 
                 <div class="row">
