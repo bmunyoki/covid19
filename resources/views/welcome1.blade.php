@@ -74,7 +74,7 @@
                 chartKE.draw(dataKE, {
                     title: 'Corona (COVID19) cases in {{ $countryKE }}',
                     legend: {position: 'bottom'},
-                    width: 1200,
+                    width: '100%',
                     height: '500',
                     explorer: {axis: 'horizontal'},
                     colors: ['#922529']
@@ -116,7 +116,7 @@
             }
         </script>
 
-        <!-- <script type="text/javascript">
+       <script type="text/javascript">
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(drawChart);
 
@@ -132,7 +132,7 @@
             }
         </script>
 
-        <script type="text/javascript">
+         <!-- <script type="text/javascript">
             google.charts.load('current', {'packages': ['corechart']});
             google.charts.setOnLoadCallback(drawChart);
 
