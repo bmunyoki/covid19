@@ -251,7 +251,7 @@
                 </div>
 
                 <div class="title m-b-md">
-                    Compare with China, Italy, US and UK
+                    Compare with China, Italy, US and Spain
                 </div>
 
                 <div id="chartWrapper2">

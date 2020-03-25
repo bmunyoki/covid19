@@ -158,8 +158,8 @@ class HomeController extends Controller {
 		  $chartDataUS[] = [$date, $numConfirmedUS];
 		});
 
-		// UK Data
-    	$countryCodeUK = 'GB';
+		// Spain Data
+    	$countryCodeUK = 'ES';
 
 		$confirmedUK = Http::get('https://coronavirus-tracker-api.herokuapp.com/confirmed')->json();
 		$confirmedDataUK = collect($confirmedUK['locations'])->where('country_code', $countryCodeUK)->first();
